@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Bộ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="showHome()">
+            <img src="assets/images/images logo.jpg" alt="Logo"> 
+            Phim Hay<span>+</span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: inherit; text-decoration: none;">Trang chủ</a></li>
+                <li><a href="phimrap.html" style="color: inherit; text-decoration: none;">Phim Rạp</a></li>
+                <li><a href="phimbo.html" style="color: inherit; text-decoration: none;">Phim Bộ</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm phim...">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="user-action">
+            <i class="fa fa-user-circle"></i> Đăng nhập
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div id="home-page">
+            <h2 class="section-title">PHIM BỘ MỚI CẬP NHẬT</h2>
+            <div class="movie-grid">
+                
+                <div class="movie-card" onclick="showDetail(this, 'Trao Em Cả Vũ Trụ', 'Our Universe')">
+                    <div class="card-thumb">
+                        <img src="assets/images/trao-em-ca-vu-tru-thumb.webp" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Tập 10/12</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Trao Em Cả Vũ Trụ</h3>
+                        <p>Our Universe</p>
+                    </div>
+                </div>
+           
+                <div class="movie-card" onclick="showDetail(this, 'Mèo béo siêu đẳng', 'Super fat cat')">
+                    <div class="card-thumb">
+                        <img src="assets/images/images.jpg mèo béo.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Tập 10/12</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mèo béo siêu đẳng</h3>
+                        <p>Super fat cat</p>
+                    </div>
+                </div>
+           
+
+                <div class="movie-card" onclick="showDetail(this, 'Núi Và Biển Của Tôi', 'My Destiny')">
+                    <div class="card-thumb">
+                        <img src="assets/images/núi.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Trọn bộ 30 tập</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Núi Và Biển Của Tôi</h3>
+                        <p>My Destiny</p>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+
+        <div id="detail-page" style="display: none;">
+            <div class="backdrop" id="detail-backdrop"></div>
+            
+            <div class="detail-wrapper">
+                <div class="detail-poster">
+                    <img src="" id="detail-img" alt="Poster">
+                </div>
+                
+                <div class="detail-info">
+                    <div class="breadcrumb">Trang chủ / Phim Bộ / <span id="bread-name"></span></div>
+                    <h1 id="detail-title"></h1>
+                    <p class="sub-name" id="detail-sub-title"></p>
+                    
+                    <button class="btn-play"><i class="fa fa-play"></i> XEM PHIM</button>
+
+                    <div class="alert-box">Xem tập mới nhất tại 👉 <span id="alert-name"></span></div>
+                    <div class="alert-box">Phim bộ cập nhật tập mới vào mỗi tối thứ 7 hàng tuần.</div>
+                    
+                    <div class="meta-data">
+                        Năm sản xuất: 2026 &nbsp; | &nbsp; Trạng thái: <span class="highlight">Đang cập nhật</span>
+                    </div>
+                    <div class="stars">
+                        ★★★★★★★☆☆☆ <span>8.0/10 (2150 đánh giá)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Hàm xử lý hiển thị chi tiết và đồng bộ ảnh
+        function showDetail(element, title, subTitle) {
+            const movieImgSrc = element.querySelector('img').src;
+
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('detail-page').style.display = 'block';
+
+            document.getElementById('detail-title').innerText = title;
+            document.getElementById('detail-sub-title').innerText = subTitle;
+            document.getElementById('bread-name').innerText = title;
+            document.getElementById('alert-name').innerText = title;
+
+            document.getElementById('detail-img').src = movieImgSrc;
+            document.getElementById('detail-backdrop').style.backgroundImage = `url('${movieImgSrc}')`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Quay lại danh sách phim bộ
+        function showHome() {
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('detail-page').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

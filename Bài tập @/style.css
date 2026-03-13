@@ -1,0 +1,206 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #0c0c0c;
+    border-bottom: 2px solid #ff8a00;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logo span { color: #ff8a00; }
+
+nav ul { display: flex; list-style: none; }
+nav ul li {
+    margin-right: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #eee;
+    cursor: pointer;
+}
+
+nav ul li:hover { color: #ff8a00; }
+
+.search-bar {
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 7px 15px;
+    border-radius: 20px;
+    color: #fff;
+    width: 250px;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 15px;
+    color: #666;
+}
+
+.user-action { margin-left: 20px; font-size: 14px; cursor: pointer; }
+
+/* Container chính */
+.container { padding: 25px 5%; }
+
+.section-title {
+    color: #ff8a00;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff8a00;
+    padding-left: 10px;
+}
+
+/* Grid Phim Trang Chủ */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover { transform: scale(1.05); }
+
+.card-thumb {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 2/3;
+}
+
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.badge {
+    position: absolute;
+    top: 8px;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.badge-sub { left: 8px; background: rgba(0,0,0,0.7); border: 1px solid #fff; }
+.badge-hd { right: 8px; background: #ff8a00; color: #000; }
+
+.episode-count {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    font-size: 11px;
+    padding: 5px;
+}
+
+.card-info h3 { font-size: 14px; margin-top: 10px; font-weight: 500; }
+.card-info p { font-size: 12px; color: #777; }
+
+/* Trang Chi Tiết */
+.backdrop {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 600px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(50px) brightness(0.3);
+    z-index: -1;
+}
+
+.detail-wrapper {
+    display: flex;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.detail-poster img {
+    width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.detail-info h1 { font-size: 38px; margin-bottom: 5px; }
+.sub-name { font-size: 20px; color: #aaa; margin-bottom: 15px; }
+.breadcrumb { font-size: 13px; color: #888; margin-bottom: 25px; }
+
+.btn-play {
+    background: #ff8a00;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.alert-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px dashed #ff8a00;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.alert-box span { color: #ff8a00; font-weight: bold; }
+
+.meta-data { margin-top: 20px; font-size: 15px; }
+.highlight { color: #ff8a00; font-weight: bold; }
+.stars { color: #ffc107; margin-top: 15px; }
+.stars span { color: #888; font-size: 13px; margin-left: 10px; }
+.logo {
+    display: flex;          /* Căn ngang ảnh và chữ */
+    align-items: center;    /* Căn giữa theo chiều dọc */
+    gap: 10px;              /* Khoảng cách giữa ảnh và chữ */
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 30px;
+    white-space: nowrap;    /* Không cho chữ xuống dòng */
+}
+
+.logo img {
+    height: 35px;           /* Chiều cao ảnh logo (nhỏ hơn chữ một chút hoặc bằng) */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #ff8a00;         /* Màu cam cho dấu + */
+}
+
+/* Hiệu ứng hover cho cả cụm logo */
+.logo:hover {
+    opacity: 0.9;
+}

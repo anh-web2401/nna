@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Chiếu Rạp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="showHome()">
+            <img src="assets/images/images logo.jpg" alt="Logo"> 
+            Phim Hay<span>+</span>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: inherit; text-decoration: none;">Trang chủ</a></li>
+                <li><a href="phimrap.html" style="color: inherit; text-decoration: none;">Phim Rạp</a></li>
+                <li><a href="phimbo.html" style="color: inherit; text-decoration: none;">Phim Bộ</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm phim...">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="user-action">
+            <i class="fa fa-user-circle"></i> Đăng nhập
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div id="home-page">
+            <h2 class="section-title">PHIM CHIẾU RẠP MỚI</h2>
+            <div class="movie-grid">
+                <div class="movie-card" onclick="showDetail(this, 'Mười', ' Ten')">
+                    <div class="card-thumb">
+                        <img src="assets/images/10.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mười</h3>
+                        <p>Ten</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Cảm ơn người đã thức cùng tôi', 'Thank you for staying up with me')">
+                    <div class="card-thumb">
+                        <img src="assets/images/cảm.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Trọn bộ 30 tập</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cảm ơn người đã thức cùng tôi</h3>
+                        <p>Thank you for staying up with me</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Mang mẹ đi bỏ', ' Take your mother away')">
+                    <div class="card-thumb">
+                        <img src="assets/images/mang mẹ đi bỏ.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mang mẹ đi bỏ</h3>
+                        <p>Take your mother away</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Làm giàu với ma', ' Get rich with ghosts')">
+                    <div class="card-thumb">
+                        <img src="assets/images/làm  giàu với ma.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Làm giàu với ma</h3>
+                        <p>Get rich with ghosts</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Mười', ' Ten')">
+                    <div class="card-thumb">
+                        <img src="assets/images/mặt nạ da ng.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mặt nạ da người</h3>
+                        <p>Human skin mask</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Tài', 'Legend of Tai')">
+                    <div class="card-thumb">
+                        <img src="assets/images/tài.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Tài</h3>
+                        <p>Legend of Tai</p>
+                    </div>
+                </div>
+                
+                <div class="movie-card" onclick="showDetail(this, 'Mùi Phở', 'The smell of pho')">
+                    <div class="card-thumb">
+                        <img src="assets/images/mùi phở.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Chiếu rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Mùi phở</h3>
+                        <p>The smell of pho</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Con kể ba nghe', ' I tell you dad')">
+                    <div class="card-thumb">
+                        <img src="assets/images/download.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Con kể ba nghe</h3>
+                        <p>I'll tell you dad</p>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="showDetail(this, 'Báu vật trời cho', 'A treasure bestowed by heaven')">
+                    <div class="card-thumb">
+                        <img src="assets/images/báu vậy.jpg" alt="Film">
+                        <span class="badge badge-sub">Vietsub</span>
+                        <span class="badge badge-hd">HD</span>
+                        <span class="episode-count">Phim Chiếu Rạp</span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Báu vật trời cho</h3>
+                        <p>A treasure bestowed by heaven</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <div id="detail-page" style="display: none;">
+            <div class="backdrop" id="detail-backdrop"></div>
+            
+            <div class="detail-wrapper">
+                <div class="detail-poster">
+                    <img src="" id="detail-img" alt="Poster">
+                </div>
+                
+                <div class="detail-info">
+                    <div class="breadcrumb">Trang chủ / Phim Rạp / <span id="bread-name"></span></div>
+                    <h1 id="detail-title"></h1>
+                    <p class="sub-name" id="detail-sub-title"></p>
+                    
+                    <button class="btn-play"><i class="fa fa-play"></i> XEM PHIM</button>
+
+                    <div class="alert-box">Xem tập mới nhất tại 👉 <span id="alert-name"></span></div>
+                    <div class="alert-box">Truy cập <span>Anime Vietsub</span> để trải nghiệm tốt nhất!</div>
+                    
+                    <div class="meta-data">
+                        Năm sản xuất: 2026 &nbsp; | &nbsp; Trạng thái: Đang chiếu <span class="highlight">Bản Đẹp HD</span>
+                    </div>
+                    <div class="stars">
+                        ★★★★★★★★☆☆ <span>8.5/10 (520 đánh giá)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="detail-page" style="display: none;">
+            <div class="backdrop" id="detail-backdrop"></div>
+            
+            <div class="detail-wrapper">
+                <div class="detail-poster">
+                    <img src="" id="detail-img" alt="Poster">
+                </div>
+                
+                <div class="detail-info">
+                    <div class="breadcrumb">Trang chủ / Phim Rạp / <span id="bread-name"></span></div>
+                    <h1 id="detail-title"></h1>
+                    <p class="sub-name" id="detail-sub-title"></p>
+                    
+                    <button class="btn-play"><i class="fa fa-play"></i> XEM PHIM</button>
+
+                    <div class="alert-box">Xem tập mới nhất tại 👉 <span id="alert-name"></span></div>
+                    <div class="alert-box">Truy cập <span>Anime Vietsub</span> để trải nghiệm tốt nhất!</div>
+                    
+                    <div class="meta-data">
+                        Năm sản xuất: 2026 &nbsp; | &nbsp; Trạng thái: Đang chiếu <span class="highlight">Bản Đẹp HD</span>
+                    </div>
+                    <div class="stars">
+                        ★★★★★★★★☆☆ <span>8.5/10 (520 đánh giá)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Hàm hiển thị chi tiết phim
+        function showDetail(element, title, subTitle) {
+            const movieImgSrc = element.querySelector('img').src;
+
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('detail-page').style.display = 'block';
+
+            document.getElementById('detail-title').innerText = title;
+            document.getElementById('detail-sub-title').innerText = subTitle;
+            document.getElementById('bread-name').innerText = title;
+            document.getElementById('alert-name').innerText = title;
+
+            document.getElementById('detail-img').src = movieImgSrc;
+            document.getElementById('detail-backdrop').style.backgroundImage = `url('${movieImgSrc}')`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Hàm quay lại danh sách phim rạp
+        function showHome() {
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('detail-page').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
